@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dark mode listener
     const darkModeToggle = document.querySelector('.dark-mode');
-    console.log(darkModeToggle)
     darkModeToggle.addEventListener('click', () => {
         if (document.body.parentElement.style.filter) {
             darkModeToggle.textContent = 'Switch to "dark mode"';
