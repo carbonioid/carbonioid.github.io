@@ -1,4 +1,5 @@
 import {changeImageIndex, setBannerImage, startBannerTimer} from './banner.js';
+export {addListeners}
 
 // Tooltip functions
 const tooltip = document.querySelector('.tooltip');
@@ -23,7 +24,7 @@ function showTooltip(text, copy) {
     }, 10000)
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function addListeners() {
     // Add listeners for buttons
     const left = document.querySelector('.left');
     const right = document.querySelector('.right');
@@ -63,4 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
             darkModeToggle.textContent = 'go back go back go back'
         }
     })
-})
+}
