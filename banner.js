@@ -20,7 +20,9 @@ const images = [
 // Preload images
 const _ = []
 images.forEach(image => {
-    _.push(new Image().src = `images/${image}`);
+    if (image != 'man.png') { // This is the first image and is already loaded
+        _.push(new Image().src = `images/${image}`);
+    }
 });
 
 function setBannerImage() {
