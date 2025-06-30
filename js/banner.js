@@ -17,9 +17,22 @@ const images = [
 
 let imageIndex = 0;
 
+function interlaceArray(arr) {
+    return arr.reduce((result, _, i) => {
+        const left = i;
+        const right = arr.length - 1 - i;
+        if (left <= right) {
+            result.push(arr[left]);
+            if (left !== right) result.push(arr[right]);
+        }
+        return result;
+    }, []);
+}
+
 async function preloadBannerImages() {
     // Preload images sequentially
-    for (const image of images) {
+    const orderedImages = interlaceArray(images); // Order so that closest images (in carousel, in both directions) are loaded first
+    for (const image of orderedImages) {
         const im = document.createElement("img")
         im.src = `images/${image}`
         await im.decode();
