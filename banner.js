@@ -1,9 +1,7 @@
 /*
 Manage banner on main page
 */
-export {changeImageIndex, setBannerImage, startBannerTimer}
-
-const root = document.documentElement;
+export {changeImageIndex, setBannerImage, startBannerTimer, preloadBannerImages};
 
 const images = [
     "man.png",
@@ -15,15 +13,22 @@ const images = [
     "bench.png",
     "tree.png",
     "leafs.png"
-]
+];
 
-// Preload images
-const _ = []
-images.forEach(image => {
-    if (image != 'man.png') { // This is the first image and is already loaded
-        _.push(new Image().src = `images/${image}`);
+let imageIndex = 0;
+
+async function preloadBannerImages() {
+    // Preload images sequentially
+    for (const image of images) {
+        const im = document.createElement("img")
+        im.src = `images/${image}`
+        await im.decode();
     }
-});
+}
+
+function changeImageIndex(d) {
+    imageIndex += d
+}
 
 function setBannerImage() {
     if (imageIndex >= images.length) {
@@ -32,16 +37,8 @@ function setBannerImage() {
         imageIndex = images.length - 1;
     }
 
-    root.style.setProperty('--image', `url(images/${images[imageIndex]})`);
+    document.documentElement.style.setProperty('--image', `url(images/${images[imageIndex]})`);
 }
-
-let imageIndex = 0;
-
-function changeImageIndex(d) {
-    imageIndex += d
-}
-
-setBannerImage();
 
 let bannerTaskId = null;
 function startBannerTimer() {
@@ -57,4 +54,6 @@ function startBannerTimer() {
     }, 15000);
 }
 
+// Run functions to initialise the banner & its functionality
+setBannerImage();
 startBannerTimer();
