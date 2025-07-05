@@ -8,9 +8,8 @@ html {
 }
 
 body {
-    width:100%;
-    padding:0;
-    margin:0;
+    width:65%;
+    margin:auto;
     padding-top:3rem;
 }
 
@@ -30,26 +29,22 @@ h3 {
 
 .main {
     margin-top:2rem;
-    width:auto;
-
-    display:grid;
-    grid-template-columns:17.5vw 65vw 17.5vw;
 }
 
 /* 
 Pages nav 
 */
 .pages {
+    margin-top:1rem;
+    margin-bottom:.5rem;
+    border:1px solid black;
+    padding:0;
+
     display:grid;
-    grid-template-rows:repeat(auto-fill, 1fr);
-    gap:1rem;
-    width:max-content;
+    grid-template-columns:repeat(3, 1fr);
 
+    width:100%;
     height:max-content;
-
-    margin:0 10% 0 auto;
-
-    align-self:start;
 }
 
 .pages a {
@@ -57,31 +52,21 @@ Pages nav
     text-decoration:none;
     background:white;
 
-    padding:0.2rem;
+    padding:0.5rem 0.2rem;
 
-    border:1px solid black;
-    display:flex;
-    flex-direction: column;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
     gap:0.5rem;
-}
-
-.pages a::after {
-    content: '';
-    display:block;
-    width:50%;
-    border:.5px solid black;
+    
+    text-align:center;
+    position:relative;  
 }
 
 .pages a:hover {
     background:black;
     color:white;
-}
 
-.pages a:hover::after {
-    border-color:white;
-}
-
-.pages a:hover {
     --line-col:rgb(35, 35, 35);
     background-image: repeating-linear-gradient(
         45deg, 
@@ -96,4 +81,18 @@ Pages nav
         transparent 2px,
         transparent 9px
     );
+}
+
+.pages a.selected::after {
+    content:"";
+    width:0.4rem;
+    height:0.4rem;
+    background-color: black;
+    display:inline-block;
+    border-radius:50%;
+}
+
+
+.pages a.selected:hover::after {
+    background-color: white;;
 }
