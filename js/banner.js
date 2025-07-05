@@ -1,7 +1,25 @@
 /*
 Manage banner on main page
 */
-export {changeImageIndex, setBannerImage, startBannerTimer, preloadBannerImages};
+export {changeImageIndex, setBannerImage, startBannerTimer, preloadBannerImages, initBannerListeners};
+
+function initBannerListeners() {
+    // Add listeners for buttons
+    const left = document.querySelector('.left');
+    const right = document.querySelector('.right');
+
+    left.addEventListener('click', () => {
+        changeImageIndex(-1);
+        setBannerImage();
+        startBannerTimer();
+    });
+
+    right.addEventListener('click', () => {
+        changeImageIndex(1);
+        setBannerImage();
+        startBannerTimer();
+    })
+}
 
 const images = [
     "man.png",
@@ -34,7 +52,7 @@ async function preloadBannerImages() {
     const orderedImages = interlaceArray(images); // Order so that closest images (in carousel, in both directions) are loaded first
     for (const image of orderedImages) {
         const im = document.createElement("img")
-        im.src = `images/${image}`
+        im.src = `banner-images/${image}`
         await im.decode();
     }
 }
@@ -50,7 +68,7 @@ function setBannerImage() {
         imageIndex = images.length - 1;
     }
 
-    document.documentElement.style.setProperty('--image', `url(images/${images[imageIndex]})`);
+    document.documentElement.style.setProperty('--image', `url(../banner-images/${images[imageIndex]})`);
 }
 
 let bannerTaskId = null;

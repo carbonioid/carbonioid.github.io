@@ -25,22 +25,6 @@ function showTooltip(text, copy) {
 }
 
 function addListeners() {
-    // Add listeners for buttons
-    const left = document.querySelector('.left');
-    const right = document.querySelector('.right');
-
-    left.addEventListener('click', () => {
-        changeImageIndex(-1);
-        setBannerImage();
-        startBannerTimer();
-    });
-
-    right.addEventListener('click', () => {
-        changeImageIndex(1);
-        setBannerImage();
-        startBannerTimer();
-    })
-
     // Add listener for links
     const discord = document.querySelector('.discord');
     discord.addEventListener('click', () => {   
@@ -65,3 +49,6 @@ function addListeners() {
         }
     })
 }
+
+// Create listeners
+addListeners();

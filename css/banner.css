@@ -1,0 +1,101 @@
+:root {
+    --imageh:16.295vw;
+    --imagew:65vw;
+}
+
+.banner-container {
+    position: relative;
+    width:65%;
+    margin:auto;
+}
+
+.banner {
+    position: relative;
+    background:black;
+    height:var(--imageh);
+    overflow:hidden
+}
+
+.banner img {
+    width:var(--imagew);
+    content:var(--image);
+    min-height:var(--imageh);
+}
+
+.banner-img {
+    transition: opacity 0.1s linear;
+}
+
+.title {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+    font-size:3vw;
+    height:3vw;
+    font-weight:850;
+
+    color:white;
+
+    background:var(--image);
+    -webkit-background-clip: text;
+    background-clip:text;
+
+    transition:none;
+    background-size:var(--imagew) var(--imageh);
+    background-position:center calc(var(--imageh) / 2 + 3vw / 2);
+}
+
+/*
+Move buttons
+*/
+.move-buttons span {
+    position:absolute;
+    top:calc(var(--imageh) / 2);
+    font-size:3vw;
+
+    padding:0.2rem;
+
+    transition:background-color 0.2s linear, color 0.2s linear;
+
+    user-select:none;
+}
+
+.move-buttons span.left {
+    transform:translate(-120%, -50%);
+}
+
+.move-buttons span.right {
+    right:0;
+    transform:translate(120%, -50%);
+}
+
+.move-buttons span:hover {
+    background:black;
+    cursor:pointer;
+    color:white;
+}
+
+/*
+Hover animations
+*/
+.title, .banner-img, .white {
+    transition: opacity 0.3s linear, color 0.3s linear, content 5s linear;
+}
+
+.banner:hover .white {
+    opacity:0;
+}
+
+.link-image .white {
+    opacity:1;
+}
+
+.banner:hover .banner-img {
+    opacity: 0;
+}
+
+.banner:hover .title {
+    color:transparent;
+}
