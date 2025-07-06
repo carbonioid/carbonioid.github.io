@@ -11,6 +11,9 @@ const config = {
             populatePhotos(Infinity);
         },
         'stylesheet': 'css/photo.css'
+    },
+    'home': {
+        'stylesheet': 'css/home.css'
     }
 }
 
