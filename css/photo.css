@@ -1,0 +1,32 @@
+/*
+Image popup
+*/
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:.5rem;
+
+  backdrop-filter: blur(20px) brightness(1);
+
+  z-index:12;
+}
+
+.popup-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+
+    z-index:13;
+}
+
+.popup-text {
+    font-size:.7rem;
+}
