@@ -15,6 +15,7 @@ h4 {
 
 .entry {
     position: relative;
+    cursor: pointer;
 }
 
 .entry .text span {
@@ -43,12 +44,11 @@ h4 {
     border:1px solid black;
     padding:.75rem;
 
-    cursor: pointer;
     background:black;
     color:white;
 }
 
-.text:hover {
+.entry:hover .text {
     --line-col:rgb(35, 35, 35);
     background-image: repeating-linear-gradient(
         90deg, 
@@ -66,7 +66,7 @@ h4 {
     );
 }
 
-.text:hover .heading {
+.entry:hover .text .heading {
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
 }
