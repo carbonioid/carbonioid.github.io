@@ -25,13 +25,15 @@
 }
 
 .title {
+    font-family:'Bytesized';
+
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
 
-    font-size:3vw;
-    height:3vw;
+    font-size:4vw;
+    height:4vw;
     font-weight:850;
 
     color:white;
@@ -42,7 +44,7 @@
 
     transition:none;
     background-size:var(--imagew) var(--imageh);
-    background-position:center calc(var(--imageh) / 2 + 3vw / 2);
+    background-position:center calc(var(--imageh) / 2 + 4vw / 2);
 }
 
 /*

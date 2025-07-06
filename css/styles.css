@@ -2,9 +2,17 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: jetbrains;
+    src: url('../mono.ttf');
+}
+
 html {
     width:100%;
-    font-family:monospace;
+    font-family: jetbrains;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 body {
@@ -35,16 +43,26 @@ h3 {
 Pages nav 
 */
 .pages {
-    margin-top:1rem;
-    margin-bottom:.5rem;
-    border:1px solid black;
-    padding:0;
+    position:sticky;
+    top:0;
 
+    margin-bottom:.5rem;
+    padding:0;
+}
+
+.pages .links {
+    border:1px solid black;
     display:grid;
     grid-template-columns:repeat(3, 1fr);
 
     width:100%;
     height:max-content;
+}
+
+.pages .filler {
+    width:100%;
+    height:1rem;
+    background:white;
 }
 
 .pages a {
@@ -61,6 +79,8 @@ Pages nav
     
     text-align:center;
     position:relative;  
+
+    cursor:pointer;
 }
 
 .pages a:hover {
