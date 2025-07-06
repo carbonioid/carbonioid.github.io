@@ -154,3 +154,13 @@ Pages nav
 .content .heading h1, .content .heading h2, .content .heading h3, .content .heading h4, .content .heading h5, .content .heading h6 {
     margin:.2rem 0;
 }
+
+/*
+Dark mode
+*/
+.dark-mode {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    cursor:pointer;
+}
