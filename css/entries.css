@@ -12,17 +12,17 @@ h4 {
     margin:0;
 }
 
-.blog-entry {
+.entry {
     width:auto;
     position: relative;
     height:max-content;
 }
 
-.blog-entry .text span {
+.entry .text span {
     font-size:1rem;
 }
 
-.blog-entry img {
+.entry img {
     width:100%;
     height:20vh;
     overflow:hidden;
