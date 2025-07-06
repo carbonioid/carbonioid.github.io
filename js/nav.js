@@ -1,6 +1,16 @@
 export {selectItem, addNavListeners};
+import { initPopupListeners, populatePhotos } from "./photo.js";
 
 const nav = document.querySelector('.pages');
+
+const config = {
+    'photo': {
+        'onload': () => {
+            initPopupListeners();
+            populatePhotos(5);
+        }
+    }
+}
 
 function selectItem(name) {
     /*
@@ -44,6 +54,11 @@ function selectItem(name) {
     const url = new URL(window.location.href);
     url.searchParams.set('page', name);
     window.history.pushState({}, '', url);
+
+    // Run any onload scripts
+    if (config[name] && config[name].onload) {
+        config[name].onload();
+    }
 
     return found
 }
