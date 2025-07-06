@@ -122,11 +122,11 @@ Pages nav
 
 @keyframes fly-in {
     0% {
-        transform: translateY(1.5rem);
+        transform: translateY(.5rem);
         opacity: 0;
     }
     50% {
-        transform: translateY(1.5rem);
+        transform: translateY(.5rem);
         opacity: 0;
     }
     100% {
@@ -148,7 +148,7 @@ Pages nav
 */
 
 .content .heading {
-    padding-bottom:0.5rem;
+    padding-bottom:1rem;
 }
 
 .content .heading h1, .content .heading h2, .content .heading h3, .content .heading h4, .content .heading h5, .content .heading h6 {
