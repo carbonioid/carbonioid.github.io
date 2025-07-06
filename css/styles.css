@@ -122,11 +122,11 @@ Pages nav
 
 @keyframes fly-in {
     0% {
-        transform: translateY(5%);
+        transform: translateY(1.5rem);
         opacity: 0;
     }
     50% {
-        transform: translateY(5%);
+        transform: translateY(1.5rem);
         opacity: 0;
     }
     100% {
@@ -139,6 +139,9 @@ Pages nav
     animation: fly-in .3s ease-out;
 }
 
+.main {
+    animation: fly-in .6s ease-out;
+}
 
 /*
 .content
