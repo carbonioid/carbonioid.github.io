@@ -3,12 +3,14 @@ import { initPopupListeners, populatePhotos } from "./photo.js";
 
 const nav = document.querySelector('.pages');
 
+// Specify onload scripts & custom stylesheets for each page (if any)
 const config = {
     'photo': {
         'onload': () => {
             initPopupListeners();
             populatePhotos(Infinity);
-        }
+        },
+        'stylesheet': 'css/photo.css'
     }
 }
 
@@ -59,6 +61,10 @@ function selectItem(name) {
     if (config[name] && config[name].onload) {
         config[name].onload();
     }
+
+    // Load appropriate stylesheet
+    const link = document.querySelector('.page-specific')
+    link.href = config[name] != undefined ? config[name].stylesheet : '';
 
     return found
 }
