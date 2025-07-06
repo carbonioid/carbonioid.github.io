@@ -1,25 +1,13 @@
 /*
 Manage banner on main page
 */
+import {interlaceArray} from './utils.js';
 export {changeImageIndex, setBannerImage, startBannerTimer, preloadBannerImages, initBannerListeners};
 
-function initBannerListeners() {
-    // Add listeners for buttons
-    const left = document.querySelector('.left');
-    const right = document.querySelector('.right');
 
-    left.addEventListener('click', () => {
-        changeImageIndex(-1);
-        setBannerImage();
-        startBannerTimer();
-    });
-
-    right.addEventListener('click', () => {
-        changeImageIndex(1);
-        setBannerImage();
-        startBannerTimer();
-    })
-}
+/********
+Banner images/functionality
+*********/
 
 const images = [
     "man.png",
@@ -34,18 +22,7 @@ const images = [
 ];
 
 let imageIndex = 0;
-
-function interlaceArray(arr) {
-    return arr.reduce((result, _, i) => {
-        const left = i;
-        const right = arr.length - 1 - i;
-        if (left <= right) {
-            result.push(arr[left]);
-            if (left !== right) result.push(arr[right]);
-        }
-        return result;
-    }, []);
-}
+let bannerTaskId = null;
 
 async function preloadBannerImages() {
     // Preload images sequentially
@@ -71,7 +48,6 @@ function setBannerImage() {
     document.documentElement.style.setProperty('--image', `url(../banner-images/${images[imageIndex]})`);
 }
 
-let bannerTaskId = null;
 function startBannerTimer() {
     // Clear any existing interval
     if (bannerTaskId) {
@@ -85,6 +61,80 @@ function startBannerTimer() {
     }, 15000);
 }
 
-// Run functions to initialise the banner & its functionality
-setBannerImage();
-startBannerTimer();
+// Tooltip functions
+const tooltip = document.querySelector('.tooltip');
+function showTooltip(text, copy) {
+    // Create tooltip HTML
+    tooltip.innerHTML = ''
+
+    tooltip.style.display = 'block';
+    const p = document.createElement('p');
+    p.textContent = `${text}`;
+
+    const span = document.createElement('span')
+    span.textContent = copy;
+    span.classList.add('copy')
+    p.appendChild(span);
+
+    tooltip.appendChild(p)
+
+    // Hide tooltip after 10 seconds
+    window.setTimeout(() => {
+        tooltip.style.display = 'none';
+    }, 10000)
+}
+
+/********
+Listeners
+*********/
+
+function initArrowListeners() {
+    // Add listeners for buttons
+    const left = document.querySelector('.left');
+    const right = document.querySelector('.right');
+
+    left.addEventListener('click', () => {
+        changeImageIndex(-1);
+        setBannerImage();
+        startBannerTimer();
+    });
+
+    right.addEventListener('click', () => {
+        changeImageIndex(1);
+        setBannerImage();
+        startBannerTimer();
+    })
+}
+
+function initLinkListeners() {
+    // Add listener for links
+    const discord = document.querySelector('.discord');
+    discord.addEventListener('click', () => {   
+        console.log(1)
+        showTooltip('my username is ', 'carbonioid');
+    })
+
+    const email = document.querySelector('.email');
+    email.addEventListener('click', () => {
+        showTooltip('you can reach me at ', 'maincarbonioid@gmail.com')
+    })
+
+    // Dark mode listener
+    const darkModeToggle = document.querySelector('.dark-mode');
+    darkModeToggle.addEventListener('click', () => {
+        if (document.body.parentElement.style.filter) {
+            darkModeToggle.textContent = 'Switch to "dark mode"';
+            document.body.parentElement.style.filter = '';
+        } else {
+            document.body.parentElement.style.filter = 'invert()';
+
+            darkModeToggle.textContent = 'go back go back go back'
+        }
+    })
+}
+
+function initBannerListeners() {
+    initArrowListeners();
+    initLinkListeners();
+}
+

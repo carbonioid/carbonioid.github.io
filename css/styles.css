@@ -35,10 +35,6 @@ h3 {
 
 /* Main container */
 
-.main {
-    margin-top:2rem;
-}
-
 /* 
 Pages nav 
 */
@@ -46,14 +42,17 @@ Pages nav
     position:sticky;
     top:0;
 
-    margin-bottom:.5rem;
     padding:0;
+    background:white;
+    z-index:10;
+
+    margin-bottom:1rem;
 }
 
 .pages .links {
     border:1px solid black;
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr);
 
     width:100%;
     height:max-content;
@@ -136,17 +135,10 @@ Pages nav
     }
 }
 
-.banner-container {
+.banner-container, .pages {
     animation: fly-in .3s ease-out;
 }
 
-.main {
-    animation: fly-in .6s ease-out;
-}
-
-.pages, .content {
-    animation: fly-in .9s ease-out;
-}
 
 /*
 .content

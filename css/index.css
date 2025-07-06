@@ -53,6 +53,7 @@ Links
 }
 
 .tooltip {
+    z-index:11;
     position:absolute;
     top:calc(var(--imageh));
     left:50%;
