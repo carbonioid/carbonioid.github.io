@@ -1,6 +1,7 @@
 .entry-container {
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-rows:repeat(auto-fill, 1fr);
     gap:1.5rem;
 
     padding:0 .5rem;
@@ -13,21 +14,29 @@ h4 {
 }
 
 .entry {
-    width:auto;
     position: relative;
-    height:max-content;
 }
 
 .entry .text span {
     font-size:1rem;
 }
 
-.entry img {
+.entry .text {
     width:100%;
-    height:20vh;
-    overflow:hidden;
+}
 
-    display:block;
+.entry .img-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+
+    height:10rem;
+    overflow:hidden;
+}
+
+.entry img {
+    max-width:100%;
+    object-fit:cover;
 }
 
 .text {
@@ -62,7 +71,7 @@ h4 {
     text-decoration-thickness: 1.5px;
 }
 
-.date {
+.subheading {
     margin-top:-0.1rem;
     font-size:0.8rem;
 }
