@@ -7,7 +7,7 @@ const config = {
     'photo': {
         'onload': () => {
             initPopupListeners();
-            populatePhotos(5);
+            populatePhotos(Infinity);
         }
     }
 }
