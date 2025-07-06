@@ -1,4 +1,4 @@
-export {selectItem}
+export {selectItem, addNavListeners};
 
 const nav = document.querySelector('.pages');
 
@@ -48,8 +48,10 @@ function selectItem(name) {
     return found
 }
 
-Array.from(nav.querySelector('.links').children).forEach((item) => {
-    item.addEventListener('click', () => {
-        selectItem(item.dataset.value);
+function addNavListeners() {
+    Array.from(nav.querySelector('.links').children).forEach((item) => {
+        item.addEventListener('click', () => {
+            selectItem(item.dataset.value);
+        })
     })
-})
+}
