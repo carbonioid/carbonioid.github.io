@@ -8,13 +8,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Bytesized" rel="stylesheet">
 
         <script src="js/nav.js" type="module"></script>
+        <script src="js/init.js" type="module"></script>
+
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/banner.css">
-        <script src="js/banner-init.js" type="module"></script>
-
         <link rel="stylesheet" href="css/index.css">
-
-        <link rel="stylesheet" href="css/blog.css">
+        <link rel="stylesheet" href="css/entries.css">
 
         <template id="home">
             <div class="intro">
@@ -41,12 +40,29 @@
                     <p>I post things here sometimes.</p>
                 </div>
                 <div class="entry-container">
-                    <!-- <div class="blog-entry">
+                    <div class="entry">
                         <div class="text">
                             <h4 class="heading">title</h4>
                             <p class="date">05 feb 2025</p>
                         </div>
-                    </div> -->
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="photo">
+            <div class="content">
+                <div class="heading">
+                    <h3>Photography</h3>
+                    <p>Here are some of the photos I've taken.</p>
+                </div>
+                <div class="entry-container">
+                    <div class="entry">
+                        <img src="https://picsum.photos/seed/3/2000/3000" alt="Photo">
+                        <div class="text">
+                            <p class="date">Ashburton</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </template>
@@ -88,21 +104,7 @@
         </nav>
 
         <div class="main">
-            <div class="intro">
-                <h3>Hi! I go by carbonioid.</h3>
-                <p>This is my cool-looking, horribly maintainable site (css masking just isn't really there yet...)
-                    <br> <br>
-                    I made the photos in the banner with my <a target="_black" href="https://github.com/carbonioid/mandelbrot">Mandelbrot explorer</a> and using my amateurish photography skills.
-                    As as well as programming and photography, I'm also interested in maths, physics, chemistry, linguistics and fractals 
-                    (hence the <a target="_black" href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot</a> images.) Also, I listen to a lot of music and play games occasionally.
-                    <br> <br>
-                    Currently, I'm very interested in building web apps. You can see the best example of that in my <a target="_black" href="https://github.com/carbonioid/productivity-suite">custom productivity suite</a>. 
-                    In the past, I've made a lot of esoteric code, simulations (& other cool graphics) and discord bots. 
-                    I've recently tried to put more of my stuff on GitHub, so you'll probably see all my new work there (if it's public.)
-                    <br> <br>
-                    If you'd like to get in touch, I'm best reached via Discord if you know me <i>in the real life</i>, or email if you don't.
-                </p>
-            </div>
+            
         </div>
     </body>
 </html>
