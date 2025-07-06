@@ -1,0 +1,52 @@
+{
+    "photos": [
+        {
+            "filename": "apple.webp",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "bench.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "ghost.png",
+            "name": "Devon, England (edited)"
+        },
+        {
+            "filename": "leaf_bw.png",
+            "name": "Devon, England (edited)"
+        },
+        {
+            "filename": "leaf_suspended.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "leaves.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "leaves2.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "panleaves.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "talltree.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "talltree2.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "wall.jpg",
+            "name": "Devon, England"
+        },
+        {
+            "filename": "wall2.jpg",
+            "name": "Devon, England"
+        }
+    ]
+}

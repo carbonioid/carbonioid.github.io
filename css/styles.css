@@ -18,7 +18,7 @@ html {
 body {
     width:65%;
     margin:auto;
-    padding-top:3rem;
+    padding:3rem 0;
 }
 
 p {
@@ -35,10 +35,6 @@ h3 {
 
 /* Main container */
 
-.main {
-    margin-top:2rem;
-}
-
 /* 
 Pages nav 
 */
@@ -46,14 +42,17 @@ Pages nav
     position:sticky;
     top:0;
 
-    margin-bottom:.5rem;
     padding:0;
+    background:white;
+    z-index:10;
+
+    margin-bottom:1rem;
 }
 
 .pages .links {
     border:1px solid black;
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr);
 
     width:100%;
     height:max-content;
@@ -115,4 +114,53 @@ Pages nav
 
 .pages a.selected:hover::after {
     background-color: white;;
+}
+
+/*
+"fly-in" animation
+*/
+
+@keyframes fly-in {
+    0% {
+        transform: translateY(.5rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(.5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.banner-container, .pages {
+    animation: fly-in .3s ease-out;
+}
+
+.main {
+    animation: fly-in .6s ease-out;
+}
+
+/*
+.content
+*/
+
+.content .heading {
+    padding-bottom:1rem;
+}
+
+.content .heading h1, .content .heading h2, .content .heading h3, .content .heading h4, .content .heading h5, .content .heading h6 {
+    margin:.2rem 0;
+}
+
+/*
+Dark mode
+*/
+.dark-mode {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    cursor:pointer;
 }
