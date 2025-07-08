@@ -24,11 +24,11 @@ body {
 p {
     margin:0;
     padding:0;
-    font-size:max(0.7rem, 0.85vw);
+    font-size:.7rem;
 }
 
 h3 {
-    font-size:max(1rem, 1.3vw);
+    font-size:1rem;
     margin:0;
     margin-bottom:1rem;
 }
