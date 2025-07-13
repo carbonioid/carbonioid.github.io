@@ -1,7 +1,7 @@
 .entry-container {
+    --min-size:15rem;
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(15rem, 1fr));
-    grid-template-rows:repeat(auto-fill, 1fr);
+    grid-template-columns:repeat(auto-fill, minmax(var(--min-size), 1fr));
     gap:1.5rem;
 
     padding:0 .5rem;
@@ -31,7 +31,7 @@ h4 {
     flex-direction: column;
     justify-content: start;
 
-    height:10rem;
+    height:calc(var(--min-size) * 0.6666);
     overflow:hidden;
 }
 
