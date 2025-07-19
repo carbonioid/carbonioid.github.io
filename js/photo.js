@@ -61,9 +61,27 @@ function populatePhotos(count) {
                         <img src="photo/${photo.filename}">
                     </div>
                     <div class="text">
-                        <p class="subheading">${photo.name}</p>
+                    
                     </div>
                 `;
+
+                const text = photoEntry.querySelector(".text")
+                
+                if (photo.heading) {
+                    const head = document.createElement('p')
+                    head.classList.add("heading")
+                    head.textContent = photo.heading
+
+                    text.appendChild(head)
+                }
+
+                if (photo.subheading) {
+                    const shead = document.createElement('p')
+                    shead.classList.add("subheading")
+                    shead.textContent = photo.subheading
+
+                    text.appendChild(shead)
+                }
 
                 addPhotoListeners(photoEntry);
 
