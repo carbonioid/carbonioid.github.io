@@ -111,7 +111,6 @@ function initLinkListeners() {
     // Add listener for links
     const discord = document.querySelector('.discord');
     discord.addEventListener('click', () => {   
-        console.log(1)
         showTooltip('my username is ', 'carbonioid');
     })
 

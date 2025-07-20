@@ -27,20 +27,15 @@ function initPopupListeners() {
 
 let aborter = null;
 function loadPopup(data) {
-    console.log(`Loading popup for ${data["filename"]}`)
     // Get the next/previous entries in metadata, carousel-style
     const photos = metadataCache["photos"]
     const currentIndex = photos.indexOf(data)
-    const next = photos[currentIndex + 1 % photos.length]
+    const next = photos[(currentIndex + 1) % photos.length]
     const prev = photos.at(currentIndex - 1) // Use at to account for negative indexes
 
-    // Remove all event listeners from these buttons by cloning them
-    // const navOpts = document.querySelector('.nav-controls')
-    // navOpts.replaceWith(navOpts.cloneNode(true))
-    if (aborter) {aborter.abort()}
+    // Remove all event listeners from these buttons
+    if (aborter) {aborter.abort()} // remove previous event 
     aborter = new AbortController();
-
-    console.log(aborter)
 
     // Add listeners for prev/next buttons
     document.querySelector("#next").addEventListener("click", () => loadPopup(next), {signal: aborter.signal})
