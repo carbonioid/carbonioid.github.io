@@ -45,6 +45,7 @@ Image popup
   font-size:.8rem;
   text-decoration: underline;
   cursor: pointer;
+  user-select: none;
 }
 
 .popup-content {
@@ -78,6 +79,10 @@ Image popup
 .img-contain img {
   max-width: 60vw;
   max-height: 60vh;
+}
+
+.load-indicator {
+  text-align:center;
 }
 
 .popup-content .right {

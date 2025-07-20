@@ -44,8 +44,24 @@ function loadPopup(data) {
     const imageSrc = `photo/${data["filename"]}`
 
     // Set the image source in the popup
+    const indicator = document.querySelector(".load-indicator");
     const popupImage = document.querySelector('.popup-img');
+
+    popupImage.setAttribute('src', '');
     popupImage.setAttribute('src', imageSrc);
+
+    // Image loading
+    if (!popupImage.complete) {
+        indicator.style.display = 'block';
+        popupImage.style.display = 'none';
+        popupImage.onload = () => {
+            indicator.style.display = 'none';
+            popupImage.style.display = 'block';
+        }
+    } else {
+        indicator.style.display = 'none';
+        popupImage.style.display = 'block';
+    }
 
     // Show popup
     const popup = document.querySelector('.image-popup');
@@ -88,7 +104,7 @@ function populatePhotos(count) {
                 photoEntry.classList.add('entry');
                 photoEntry.innerHTML = `
                     <div class="img-container">
-                        <img src="photo/${photo.filename}">
+                        <img src="photo/${photo.thumbnail}">
                     </div>
                     <div class="text">
                     
