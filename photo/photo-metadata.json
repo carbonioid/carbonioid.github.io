@@ -1,372 +1,373 @@
 {
     "photos": [
-      {
-          "filename": "london-10.png",
-          "heading": "Devon, England",
-          "subheading": "",
-          "desc": "I was really trying to capture the expansiveness of the tracks in this shot by framing them against the sky. Ideally, the reader's eye would be drawn up and see the tracks turn off, leading them to consider just how far the tracks continue. The blankness of the sky also contrast the business of the ground nicely to add the facet of the complexity of the station.",
-          "camera": "Samsung A14",
-          "date": 1752883200
-      },
-      {
-          "filename": "london-7.jpg",
-          "heading": "London, England",
-          "subheading": "Paddington Station",
-          "desc": "I was really trying to capture the expansiveness of the tracks in this shot by framing them against the sky. Ideally, the reader's eye would be drawn up and see the tracks turn off, leading them to consider just how far the tracks continue. The blankness of the sky also contrast the business of the ground nicely to add the facet of the complexity of the station.",
-          "camera": "Samsung A14",
-          "date": 1752883200
-      },
-      {
-        "filename": "apple.webp",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "bench.jpg",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "ghost.png",
-        "heading": "Devon, England (edited)",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "leaf_bw.png",
-        "heading": "Devon, England (edited)",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "leaf_suspended.jpg",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "leaves2.jpg",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "panleaves.jpg",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "talltree.jpg",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "talltree2.jpg",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "wall.jpg",
-        "heading": "Devon, England",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751241600
-      },
-      {
-        "filename": "20250703_123020.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_143102.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_131042.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Ilfracombe Aquarium",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_123043.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_142913.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_144637.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_132429.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Ilfracombe Aquarium",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_140858.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_144826.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_142926.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_132227.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Ilfracombe Aquarium",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_140854.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_142514.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_130555.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Ilfracombe Aquarium",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_143021.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_142908.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_125628.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Ilfracombe Aquarium",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_141014.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Verity Statue",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_141007.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Verity Statue",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_140836.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "Verity Statue",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_144710.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250703_144922.jpg",
-        "heading": "Ilfracombe, Devon",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1751500800
-      },
-      {
-        "filename": "20250715_161344.jpg",
-        "heading": "Exeter, Devon",
-        "subheading": "River Exe",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752537600
-      },
-      {
-        "filename": "20250715_161411.png",
-        "heading": "Exeter, Devon",
-        "subheading": "River Exe",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752537600
-      },
-      {
-        "filename": "london-0.png",
-        "heading": "London, England",
-        "subheading": "Paddington Station",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-1.png",
-        "heading": "Devon, England (edited)",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-2.png",
-        "heading": "London, England",
-        "subheading": "Victoria Street",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-3.png",
-        "heading": "London, England",
-        "subheading": "Paddington Station",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-4.png",
-        "heading": "London, England",
-        "subheading": "Paddington Station",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-5.png",
-        "heading": "London, England",
-        "subheading": "Victoria Palace Theatre",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-6.png",
-        "heading": "London, England (edited)",
-        "subheading": "Brompton Road Station",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-8.png",
-        "heading": "London, England",
-        "subheading": "Paddington Station",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-9.png",
-        "heading": "Devon, England (edited)",
-        "subheading": "",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      },
-      {
-        "filename": "london-11.png",
-        "heading": "London, England",
-        "subheading": "Victoria Street",
-        "desc": "",
-        "camera": "Samsung A14",
-        "date": 1752883200
-      }
+        {
+            "filename": "20250703_143102.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "I really love the colors in this one. I didn't even intend for it to come out like this, but the orange (?) against the blue sky is so beautiful and the fact that that was there naturally is amazing. Also, the focus going in and out from different flowerheads gives it such a fluid feel without needing to blur the photo to indicate wind, whicih really emphasises the impact of being directly above the sea.",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "london-10.png",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "I was really trying to capture the expansiveness of the tracks in this shot by framing them against the sky. Ideally, the reader's eye would be drawn up and see the tracks turn off, leading them to consider just how far the tracks continue. The blankness of the sky also contrast the business of the ground nicely to add the facet of the complexity of the station.",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-7.jpg",
+            "heading": "London, England",
+            "subheading": "Paddington Station",
+            "desc": "I was attempting to get a good shot of Paddington station every moment I was in it while in London. But it was surprisingly difficult: the generic shot of the roofing, parallel to the proper direction, didn't really work because my camera couldn't capture the parallax properly, so there was no sense of scale. I tried some other photos from the ground upwards (low angle shots) but none of then looked very good because the roof of Paddington isn't very interesting without context. Eventually, I found a spot without many people and managed to snatch this shot of the roof and crop it down to get rid of any noise. I am *very* pleased that I at least got something because Paddington station is a very beautiful thing in person.",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "leaf_suspended.jpg",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "This isn't actually edited. I was out walking and just found a leaf that was hanging by what looked like a spider's web. I especially like that it was next to a tree because it gives the photo a lot more character than just a floating leaf, especially with the semi-contrasting colors.",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "20250703_125628.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Ilfracombe Aquarium",
+            "desc": "fish look at you.",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "talltree2.jpg",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "This is my probably one of my favourite natural forms I've taken. It wasn't even a particularly special tree, I just managed to pull off this low-angle shot really well. The fact that the tree bends inwards also makes it work so much better because I don't have to move the camera so far back to capture the whole tree, so I can afford for it to face much more vertically. Really cool sightlines on this one.",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "leaves2.jpg",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "This is one of the photos I took for a photography course that I abandoned. It's one of the few times that 'fill the frame' worked out for me, but the colors do look really nice and it's pretty unique compared to what I usually tend to make.",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "20250703_142913.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "This is one of quite a few shots that came from a cool cliff-face I found in Ilfracombe. Low angle shots just worked so well here because of the gradient from rock to grass and the steepnes of the cliff. Plus, the water was really vivid that day and so provides a really stunning backdrop.",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_132429.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Ilfracombe Aquarium",
+            "desc": "This comes from an aquarium I visited while in Ilfracombe (I don't have scuba diving gear or anything.) I'm a bit sad about how blurry it is, because a clear shot of an octopus (especially as they're looking at the camera) would've been so otherwordly. But the blur does give a nice sense of movement which you often lose in aquariums and photography. So I guess I'm righting two wrongs.",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_144826.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "I'm irrationally fond of this one. I saw this little rock thing while I was climbing into a cave, and it just seemed so bizarre to me. Only one wall still exists, and there are no buildings anywhere near it. Plus, it's at the top of a cliff. Who builds something there? I think I managed to frame the oddness of it pretty well here, but it still looks a bit more normal than I consider it because I can't give the context of the whole surroundings (and the lack of building) in a photo. Potentially, I could've tried to frame the edge of the cliff to give it a sense of precariousness.",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_132227.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Ilfracombe Aquarium",
+            "desc": "its just... funne.",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+
+        {
+            "filename": "london-6.png",
+            "heading": "London, England (edited)",
+            "subheading": "Brompton Road Station",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-9.png",
+            "heading": "Devon, England (edited)",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-4.png",
+            "heading": "London, England",
+            "subheading": "Paddington Station",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-5.png",
+            "heading": "London, England",
+            "subheading": "Victoria Palace Theatre",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-2.png",
+            "heading": "London, England",
+            "subheading": "Victoria Street",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-0.png",
+            "heading": "London, England",
+            "subheading": "Paddington Station",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "20250703_144922.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_143021.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "apple.webp",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "bench.jpg",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "ghost.png",
+            "heading": "Devon, England (edited)",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "leaf_bw.png",
+            "heading": "Devon, England (edited)",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "panleaves.jpg",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "talltree.jpg",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "wall.jpg",
+            "heading": "Devon, England",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751241600
+        },
+        {
+            "filename": "20250703_123020.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_131042.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Ilfracombe Aquarium",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_123043.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_144637.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_140858.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_142926.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_140854.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_142514.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_130555.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Ilfracombe Aquarium",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_142908.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_141014.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Verity Statue",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_141007.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Verity Statue",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_140836.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "Verity Statue",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250703_144710.jpg",
+            "heading": "Ilfracombe, Devon",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1751500800
+        },
+        {
+            "filename": "20250715_161344.jpg",
+            "heading": "Exeter, Devon",
+            "subheading": "River Exe",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752537600
+        },
+        {
+            "filename": "20250715_161411.png",
+            "heading": "Exeter, Devon",
+            "subheading": "River Exe",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752537600
+        },
+        {
+            "filename": "london-1.png",
+            "heading": "Devon, England (edited)",
+            "subheading": "",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-3.png",
+            "heading": "London, England",
+            "subheading": "Paddington Station",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-8.png",
+            "heading": "London, England",
+            "subheading": "Paddington Station",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        },
+        {
+            "filename": "london-11.png",
+            "heading": "London, England",
+            "subheading": "Victoria Street",
+            "desc": "",
+            "camera": "Samsung A14",
+            "date": 1752883200
+        }
     ]
-  }
+}
