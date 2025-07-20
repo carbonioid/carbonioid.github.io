@@ -21,20 +21,40 @@ Image popup
 
 .popup-container {
   z-index:13;
-
   max-width:90%;
   max-height:90%;
-
-  display:grid;
-  grid-template-columns:auto minmax(auto, 30rem);
-  gap:1.5rem;
 
   background:white;
   padding:1.5rem;
 }
 
+.nav-controls {
+  position: absolute;
+  top:1rem;
+  left:50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  gap:1rem;
+
+  background-color:white;
+  padding:.5rem;
+}
+
+.nav-controls p {
+  font-size:.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.popup-content {
+  display:grid;
+  grid-template-columns:auto minmax(auto, 30rem);
+  gap:1.5rem;
+}
+
 @media only screen and (max-width: 800px) {
-  .popup-container {
+  .popup-content {
     grid-template-columns: 1fr;
   }
 

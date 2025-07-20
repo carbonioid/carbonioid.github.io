@@ -18,7 +18,8 @@ const images = [
     "man6.png",
     "bench.png",
     "tree.png",
-    "leafs.png"
+    "leafs.png",
+    "paddington.png"
 ];
 
 let imageIndex = 0;

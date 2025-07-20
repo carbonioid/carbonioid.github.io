@@ -4,6 +4,8 @@ Listeners etc for the photography page / photo gallery
 
 export {initPopupListeners, populatePhotos}
 
+let metadataCache = null;
+
 function initPopupListeners() {
     const popup = document.querySelector('.image-popup');
     const body = popup.querySelector(".popup-container")
@@ -23,31 +25,53 @@ function initPopupListeners() {
     })
 }
 
+let aborter = null;
+function loadPopup(data) {
+    console.log(`Loading popup for ${data["filename"]}`)
+    // Get the next/previous entries in metadata, carousel-style
+    const photos = metadataCache["photos"]
+    const currentIndex = photos.indexOf(data)
+    const next = photos[currentIndex + 1 % photos.length]
+    const prev = photos.at(currentIndex - 1) // Use at to account for negative indexes
+
+    // Remove all event listeners from these buttons by cloning them
+    // const navOpts = document.querySelector('.nav-controls')
+    // navOpts.replaceWith(navOpts.cloneNode(true))
+    if (aborter) {aborter.abort()}
+    aborter = new AbortController();
+
+    console.log(aborter)
+
+    // Add listeners for prev/next buttons
+    document.querySelector("#next").addEventListener("click", () => loadPopup(next), {signal: aborter.signal})
+    document.querySelector("#prev").addEventListener("click", () => loadPopup(prev), {signal: aborter.signal})
+
+    const imageSrc = `photo/${data["filename"]}`
+
+    // Set the image source in the popup
+    const popupImage = document.querySelector('.popup-img');
+    popupImage.setAttribute('src', imageSrc);
+
+    // Show popup
+    const popup = document.querySelector('.image-popup');
+    popup.style.display = '';
+
+    // Set the link & general content
+    document.querySelector('.plink').href = imageSrc;
+    document.querySelector(".pheading").textContent = data.heading || "No title";
+    document.querySelector(".psubheading").textContent = data.subheading || ""
+    document.querySelector(".pdesc").textContent = data.desc || "";
+
+    // Set metadata
+    const date = new Date(data.date * 1000) // multiply unix timestamp by 1000 to get milliseconds
+    const formattedDate = date.toLocaleDateString("en-ca") // format as YYYY-MM-DD
+    document.querySelector(".date-value").textContent = formattedDate
+
+    document.querySelector(".camera-value").textContent = data.camera
+}
+
 function addPhotoListeners(photoContainer, data) {
-    photoContainer.addEventListener('click', () => {
-        const imageSrc = photoContainer.querySelector('img').getAttribute('src');
-
-        // Set the image source in the popup
-        const popupImage = document.querySelector('.popup-img');
-        popupImage.setAttribute('src', imageSrc);
-
-        // Show popup
-        const popup = document.querySelector('.image-popup');
-        popup.style.display = '';
-
-        // Set the link & general content
-        document.querySelector('.plink').href = imageSrc;
-        document.querySelector(".pheading").textContent = data.heading || "No title";
-        document.querySelector(".psubheading").textContent = data.subheading || ""
-        document.querySelector(".pdesc").textContent = data.desc || "";
-
-        // Set metadata
-        const date = new Date(data.date * 1000) // multiply unix timestamp by 1000 to get milliseconds
-        const formattedDate = date.toLocaleDateString("en-ca") // format as YYYY-MM-DD
-        document.querySelector(".date-value").textContent = formattedDate
-
-        document.querySelector(".camera-value").textContent = data.camera
-    });
+    photoContainer.addEventListener('click', () => loadPopup(data));
 }
 
 function populatePhotos(count) {
@@ -59,6 +83,7 @@ function populatePhotos(count) {
             return response.json();
         })
         .then(data => {
+            metadataCache = data;
             const gallery = document.querySelector('.photo-container');
 
             for (var i = 0; i < Math.min(count, data.photos.length); i++) {
