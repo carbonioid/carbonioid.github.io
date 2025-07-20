@@ -80,7 +80,7 @@ Image popup
   max-height: 60vh;
 }
 
-.right {
+.popup-content .right {
   display:grid;
   grid-template-rows:auto auto 1fr auto;
   height:100%;
