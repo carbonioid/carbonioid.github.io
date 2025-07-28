@@ -413,6 +413,46 @@
             "camera": "Samsung A14",
             "date": 1752883200,
             "thumbnail": "THUMB_london-11.png"
+        },
+        {
+            "filename": "exeter-1.png",
+            "thumbnail": "THUMB_exeter-1.png",
+            "heading": "Exeter, Devon",
+            "subheading": "",
+            "date": 1753713039,
+            "camera": "iPhone 13"
+        },
+        {
+            "filename": "exeter-2.png",
+            "thumbnail": "THUMB_exeter-2.png",
+            "heading": "Exeter, Devon",
+            "subheading": "",
+            "date": 1753713039,
+            "camera": "iPhone 13"
+        },
+        {
+            "filename": "exeter-3.png",
+            "thumbnail": "THUMB_exeter-3.png",
+            "heading": "Exeter, Devon",
+            "subheading": "",
+            "date": 1753713039,
+            "camera": "iPhone 13"
+        },
+        {
+            "filename": "exeter-4.png",
+            "thumbnail": "THUMB_exeter-4.png",
+            "heading": "Exeter, Devon",
+            "subheading": "",
+            "date": 1753713040,
+            "camera": "iPhone 13"
+        },
+        {
+            "filename": "exeter-5.png",
+            "thumbnail": "THUMB_exeter-5.png",
+            "heading": "Exeter, Devon",
+            "subheading": "",
+            "date": 1753713040,
+            "camera": "iPhone 13"
         }
     ]
 }
