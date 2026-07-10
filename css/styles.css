@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: jetbrains;
+    src: url('../mono.ttf');
+}
+
+html {
+    width:100%;
+    font-family: jetbrains;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    width:65%;
+    margin:auto;
+    padding:3rem 0;
+}
+
+p, .paragraph {
+    margin:0;
+    padding:0;
+    font-size:0.85rem;
+}
+
+h3 {
+    font-size:1rem;
+    margin:0;
+    margin-bottom:1rem;
+}
+
+/* Main container */
+
+/* 
+Pages nav 
+*/
+.pages {
+    position:sticky;
+    top:0;
+
+    padding:0;
+    background:white;
+    z-index:10;
+
+    margin-bottom:1rem;
+}
+
+.pages .links {
+    border:1px solid black;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+
+    width:100%;
+    height:max-content;
+}
+
+.pages .filler {
+    width:100%;
+    height:1rem;
+    background:white;
+}
+
+.pages a {
+    color:black;
+    text-decoration:none;
+    background:white;
+
+    padding:0.5rem 0.2rem;
+
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+    
+    text-align:center;
+    position:relative;  
+
+    cursor:pointer;
+}
+
+.pages a:hover {
+    background:black;
+    color:white;
+
+    --line-col:rgb(35, 35, 35);
+    background-image: repeating-linear-gradient(
+        45deg, 
+        var(--line-col) 0px,
+        var(--line-col) 2px,
+        transparent 2px,
+        transparent 9px
+    ), repeating-linear-gradient(
+        -45deg, 
+        var(--line-col) 0px,
+        var(--line-col) 2px,
+        transparent 2px,
+        transparent 9px
+    );
+}
+
+.pages a.selected::after {
+    content:"";
+    width:0.4rem;
+    height:0.4rem;
+    background-color: black;
+    display:inline-block;
+    border-radius:50%;
+}
+
+
+.pages a.selected:hover::after {
+    background-color: white;;
+}
+
+/*
+"fly-in" animation
+*/
+
+@keyframes fly-in {
+    0% {
+        transform: translateY(.5rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(.5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.banner-container, .pages {
+    animation: fly-in .3s ease-out;
+}
+
+.main {
+    animation: fly-in .6s ease-out;
+}
+
+/*
+.content
+*/
+
+.content .heading {
+    padding-bottom:1rem;
+}
+
+.content .heading h1, .content .heading h2, .content .heading h3, .content .heading h4, .content .heading h5, .content .heading h6 {
+    margin:.2rem 0;
+}
+
+/*
+Dark mode
+*/
+.dark-mode {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    cursor:pointer;
+}

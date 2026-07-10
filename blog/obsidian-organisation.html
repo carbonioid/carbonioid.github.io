@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>carbonioid - blog - notes on obsidian organisation</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bytesized" rel="stylesheet">
+
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/blog.css">
+    </head>
+
+    <body class="blog-body">
+        <header class="blog-header">
+            <p class="backlink"><span class="material-symbols-outlined arrow-back">arrow_back</span> <span>Back to <a href="../?page=blog">blog</a></span></p>
+            <p class="metadata">Posted Jun 13th 2026</p>
+        </header>
+        <main class="blog-content">
+            <p class="blog-title">
+                notes on obsidian organisation
+            </p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260613133138.png">
+                <p class="image-caption">Some eye candy: my current obsidian graph. Nodes are notes, and edges are the links between them.</p>
+            </div>
+            <p class="blog-paragraph">For those who don't know, <a href="https://obsidian.md/">Obsidian</a> is a markdown editor which lets you organise notes by links, folders and tags. For me it has become a space where I put (nearly) everything I do which can be written down textually: school notes, disorganised thoughts, independent research on my interests, you name it. Even this blog post was first written in my Obsidian vault.</p>
+            <p class="blog-paragraph">The main advantage of having one central store for these notes (as Obsidian calls them) is that it makes connecting ideas and data together very easy. Obsidian also has a massive plugin ecosystem, which allows you to add functionality to your client. For example, each day a plugin creates a note which collates my to-do list for the day, any large assignments I'm currently doing, and a list of media I'm currently reading/watching. That's only possible because the data is all in one place and, crucially, it's structured well.</p>
+            <p class="blog-paragraph">The main focus of this post will be how I structure my Obsidian vault. Markdown is a useful format because it allows both human- and machine-readable properties, so I'll discuss both the more holistic approaches I've taken to human-readable structure, and the machine-readable properties I try to maintain to make automation in my vault easy.</p>
+            <p class="blog-subheading" style="--font-size-rem:2.0rem;">Tags</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260613130911.png">
+                <p class="image-caption">A snippet of some of the tags I currently use for organisation.</p>
+            </div>
+            <p class="blog-paragraph">Your mileage will vary, but between links, folders and tags what I use the most currently is tags. In the frontmatter of each note, there will typically be:</p>
+            <ul class="blog-list">
+                <li>one class tag (those are the ones you see in the image above)</li>
+                <li>one (optional) type tag</li>
+                <li>zero or more content tags</li>
+            </ul>
+            <p class="blog-paragraph">Using tags lets me add a lot of structure to my notes (as opposed to links which are more fluid) without constraining the amount of information I can store (as opposed to folders - a note can only belong to one folder at a time.)</p>
+            <p class="blog-paragraph">The main benefits of having layers of organisational structure are twofold. For class and type tags, they allow me to define how these notes interact with other parts of my system. For example, notes of specific types relating to projects I'm doing are the only ones allowed to have a "progress" tag denoting how far through them I am.</p>
+            <p class="blog-paragraph">Secondly, the requirement to specify these tags whenever I start a note helps forces me to be intentional when deciding about the structure of the note: should this really be only one note, or does the inability to decide on a proper type imply that I should actually split it into two separate notes to be consistent?</p>
+            <p class="blog-subheading" style="--font-size-rem:1.6rem;">Class tags</p>
+            <p class="blog-paragraph">Class tags are the highest level of organisation for my notes. A class note dictates the very broad organisational principles a note should follow: what kind of information does the note contain, how long is it, how is it written etc. I use five different classes, and I'll go through each briefly:</p>
+            <ul class="blog-list">
+                <li><b>Knowledge:</b> the knowledge type is the most typical kind of Obsidian note, similar to a literature note in a <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a>. Knowledge notes are atomic and stored learned information. School notes fit into this category.</li>
+                <li><b>Thought:</b> this is the most particular type I use, as it doesn't fit elsewhere. Thought notes are just notes for storing disorganised thoughts about something. This is usually in a serial format: for example, I might have a thought note about <a href="https://en.wikipedia.org/wiki/Selective_abstraction">selective abstraction</a> with thoughts about it from various days.</li>
+                <li><b>Organisation (org):</b> organisation notes which collate information and perform boilerplate functions. They don't contain original information, rather just move around information from other notes. For example, a list of all your notes about Physics would be an org note.</li>
+                <li><b>Info:</b> info notes are notes which contain information that could just as easily not be on Obsidian. Unlike knowledge notes, they aren't usually atomic and often contain long paragraphs of text. Generally, info notes are checklists and long pieces of writing (this blog post was originally an info note.)</li>
+                <li><b>Working note:</b> this is my most recent category and is somewhat similar to a fleeting note in a Zettelkasten. Working notes are messy and in progress, usually a store of information for a project I'm working on. A working note eventually gets split into one or more notes and reorganised into another kind of note (usually a knowledge note.) This category is really here out of necessity rather than any organisational reason, just because I tend to have a lot of these working notes.</li>
+            </ul>
+            <p class="blog-paragraph">Okay, sorry for that complete text wall. The next sections should be shorter and easier to explain: type tags and content tags</p>
+            <p class="blog-subheading" style="--font-size-rem:1.6rem;">Type tags</p>
+            <p class="blog-paragraph">Type tags indicate the structure of a note. That is, types of notes with distinct structures all have a common type tag. Needing to set the type whenever I start a note helps me be a lot more thorough and structured in my note-taking. Type tags are also very useful when creating notes from templates: you can enter a type tag in the template, then be sure that all tags created with that template will have a common tag.</p>
+            <p class="blog-paragraph">To give some examples, I keep notes for media I'm reading/watching. All of these get the #meta/type/media-note tag, as the structure of the frontmatter is consistent between all media notes (although not necessarily the text of the note.) This could also go the other way - the frontmatter might vary, but the text's structure would be the same.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260613215018.png">
+                <p class="image-caption">An example of a media note, for the comic series <a href="https://jumalanpelko.thecomicseries.com/">Jumalanpelko</a> which I recently read (banner image created using the Pretty Properties plugin if anyone is interested)</p>
+            </div>
+            <p class="blog-subheading" style="--font-size-rem:1.6rem;">Content tags</p>
+            <p class="blog-paragraph">Content tags dictate, well, the content of a note. They are mostly used when I'm searching for notes, and take the place of what other people would probably use folders for: there is a maths content tag for all my mathematics-based notes, as well as an obsidian tag for all my notes talking about obsidian.</p>
+            <p class="blog-subheading" style="--font-size-rem:2.0rem;">Links</p>
+            <p class="blog-paragraph">Links aren't as important to me as they perhaps should be. In my daily notes, I make a lot of use of linking to notes for people and projects I'm working on (although I haven't found a useful way to use this data in queries yet.) I'm also making more of a start making mathematics theorems and proofs atomics so I can link between them. Overall, links more or less just function as links for me: they let me reference other pages.</p>
+            <p class="blog-subheading" style="--font-size-rem:2.0rem;">Folders</p>
+            <p class="blog-paragraph">In terms of folders, when I started out with Obsidian I used many, many nested folders to organise all my notes. I've since moved away from this system (although I'm still partially migrated from it) mostly due to the fact that a note can only belong to one folder. There is some utility to folders as they provide a hierarchical structure which, crucially, I can view in Obsidian's file browser, but my current hope is to instead just use router pages (see below) and tags.</p>
+            <p class="blog-subheading" style="--font-size-rem:1.6rem;">Router pages</p>
+            <p class="blog-paragraph">The most useful pattern for Obsidian I'm using by far is <b>router pages</b>. A router page is an organisational page which only serves to list all the pages relating to that topic. The benefit of them is that they just make navigating your vault so much easier: if you don't know the precise name of a file but know the topic, you can just use the quick switcher to get to the router for that topic and quickly find the page.</p>
+            <p class="blog-paragraph">This more or less allows collections of notes (through folders or tags) to interact <i>as notes</i> in your vault rather than being navigated through the file browser. Normally, I use a dataview query to list notes in a router. Obviously, you shouldn't make a router for topics that are too broad: in my experience, routers get cumbersome after you have more than 10 or 15 notes in them.</p>
+            <p class="blog-paragraph">The final benefit is that routers allow your notes to act like they're in folders without actually being in folders. As I'm switching over to tags, I don't have to change my navigation habits (in fact, routers actually become <i>more</i> flexible.) I only need to update my dataview queries to query by tag and not enclosing folder.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260613215914.png">
+                    <p class="image-caption">My router page for Obsidian</p>
+            </div>
+            <p class="blog-subheading" style="--font-size-rem:2.0rem;">Frontmatter</p>
+            <p class="blog-paragraph">Frontmatter is a set of machine- and human-readable key-value pairs at the start of an Obsidian note. Its purpose is to store small, structured pieces of information about the current note. I use frontmatter for three pretty typical uses cases:</p>
+            <p class="blog-paragraph"><b>Note type-specific properties:</b> Some note types (from the "Type tags" section) will have a set of frontmatter properties that are unique to them: for example, all media notes in my vault have an "author" frontmatter property.</p>
+            <p class="blog-paragraph"><b>General properties:</b> I use some general properties which all notes can have: namely a custom "related" property which I use to denote related notes, although this differs slightly depending on the context. For example, in notes for math theorems, related notes are often theorems needed as prerequisites.</p>
+            <p class="blog-paragraph">I also have a "progress" tag which is used over multiple note types (mostly relating to ongoing projects). This is very useful for organising notes in dataview queries.</p>
+            <p class="blog-paragraph">As a quick addendum, I would recommend anyone who uses a lot of frontmatter tags and has an interest in making their vault pretty to install <a href="https://community.obsidian.md/plugins/typify">Typify</a> to make them look nice.</p>
+            <p class="blog-subheading" style="--font-size-rem:2.0rem;">Fin.</p>
+            <p class="blog-paragraph">Well, that's pretty much everything. When I started writing this post, I had the word "brief" in the description but I... don't think that really applies anymore. If anyone of this gives you ideas for your own vault (or inspires you to download Obsidian — definitely do!) then I'd be honoured :)</p>
+            <p class="blog-paragraph">There is some other Obsidian stuff I'd like to go into - conversion to/from other programs and styling - so I might make a few more in this vein at some point. Watch this space. Anyway, thanks for reading.</p>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+body {
+    display:grid;
+    grid-template-rows: 3rem auto;
+    width:50rem;
+
+    --font-size-para:0.8rem;
+    --accent-color:#86ACEF;
+    position: relative;
+}
+
+/* body::before {
+    content: "";
+    position: absolute;
+    top:3rem;
+    bottom:3rem;
+    left:-5rem;
+    height:calc(100% - 6rem);
+    border-left:2px solid var(--accent-color);
+    z-index:-1;
+} */
+
+/* Header */
+
+header.blog-header {
+    display:grid;
+    grid-template-columns:auto auto;
+    width:100%;
+    align-items: center;
+}
+
+header.blog-header .metadata {
+    display:flex;
+    justify-content: right;
+}
+
+header.blog-header .arrow-back {
+    font-size:1rem;
+}
+
+header.blog-header p.backlink {
+    display:flex;
+  align-items: center;
+  gap:1rem;
+}
+
+p.backlink a {
+    color:black;
+}
+
+/*
+Main content
+*/
+
+main.blog-content {
+    counter-reset: paragraphs; /* for line numbers; */
+    display:grid;
+    grid-template-columns: auto;
+    gap:0.8rem;
+}
+
+p.blog-title {
+    font-size:3rem;
+    margin-bottom:1rem;
+    border-bottom:3px solid black;
+    width:100%;
+}
+
+/* Images */
+div.blog-image {
+    width:100%;
+    display:grid;
+    grid-template-rows:auto 2rem;
+    place-items: center;
+}
+
+img.blog-image {
+    width:45%;
+}
+
+p.image-caption {
+    font-style:italic;
+    font-weight:350;
+}
+
+/* Paragraphs */
+p.blog-paragraph {
+    position: relative;
+    font-size:var(--font-size-para);
+}
+
+p.blog-paragraph::before {
+    counter-increment: paragraphs;
+    content: counter(paragraphs, decimal-leading-zero);
+    position: absolute;
+    left:-2rem;
+    color:gray;
+    font-size:var(--font-size-para);
+}
+
+/* Subheadings */
+p.blog-subheading {
+    font-weight:850;
+    font-size:var(--font-size-rem);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* 
+p.blog-subheading::before {
+    content: "1.1";
+    position: absolute;
+    left:-2rem;
+    font-size:var(--font-size-para);
+} */
+
+/* Lists */
+ul.blog-list {
+    margin-top:-0.5rem;
+    margin-bottom:-0.5rem;
+}
+
+ul.blog-list li {
+    font-size:var(--font-size-para);
+}
+
+b {
+    font-weight:950;
+    color:var(--accent-color);
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bytesized" rel="stylesheet">
+
+        <script src="js/init.js" type="module"></script>
+
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/banner.css">
+        <link rel="stylesheet" href="css/entries.css">
+
+        <link rel="stylesheet" href="" class="page-specific">
+
+        <template id="home">
+            <title>carbonioid</title>
+            <div class="content">
+                <div class="heading">
+                    <h3>Hi! I go by carbonioid.</h3>
+                    <div class="paragraph">This is my cool-looking, horribly maintainable site (css masking just isn't really there yet...)  
+                    <br> <br>
+                    I made the photos in the banner with my <a target="_blank" href="https://github.com/carbonioid/mandelbrot">Mandelbrot explorer</a> and using my amateurish <a href="/?page=photo">photography</a> skills.
+                    As as well as programming and photography, I'm also interested in maths, physics, chemistry, linguistics and fractals 
+                    (hence the <a target="_blank" href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot</a> images.) Also, I listen to a lot of music and play games occasionally.
+                    <br> <br>
+                    I'm currently studying Mathematics, Computer Science and Physics and doing a lot of programming and maths recreationally as well.
+                    <ol>
+                        <li>I like linear algebra and graph theory</li>
+                        <li>I've written some <a href="./files/special_relativity.pdf">research papers</a> and made some <a target="_blank" href="https://www.desmos.com/calculator/3zrkas2upm">pretty graphs</a></li>
+                        <li>I also enjoy proramming discord bots, esoteric code, fractal simulations and CLI tools</li>
+                    </ol> 
+                    While you're here,
+                    <ol>
+                        <li>Check out the <a href="./?page=photo">photos I've taken</a></li>
+                        <li>Read my <a href="/blog/obsidian-organisation.html">post about Obsidian</a> or <a href="/?page=blog">check out my blog more generally</a></li>
+                        <li>Have a look at my various <a href="/?page=things">Things™</a></li>
+                        <li>Go play some <a href="/things/webgames.html">webgames</a></li>
+                    </ol>
+                    If you'd like to get in touch, I'm best reached via Discord if you know me <i>in the real life</i>, or email if you don't.
+                    
+                    <br> <br>
+                    </div>      
+                </div>
+            </div>
+        </template>
+
+        <template id="blog">
+            <title>carbonioid - blog</title>
+            <div class="content">
+                <div class="heading">
+                    <h3>Blog</h3>
+                    <div class="heading">
+                        <p>I post things here sometimes. No particular topics, but frequently random thoughts about media, compsci and math projects, and stuff about Obsidian.</p>
+                    </div>
+                    <div class="entry-container">
+                        <a class="entry"  href="./blog/obsidian-organisation.html">
+                            <div class="text">
+                                <p class="heading">notes on obsidian organisation</p>
+                                <p class="subheading">an overview of the systems ive created to categorise and structure my obsidian notes</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="photo">
+            <title>carbonioid - photography</title>
+            <div class="content">
+                <div class="heading">
+                    <h3>Photography</h3>
+                    <p>Here are some of the photos I've taken. They're all taken on my awful phone camera, but sometimes they look kind of good anyway. 
+                        Those are the ones that I put here.</p>
+                    <p><b style="font-weight:850;">Click on any of the photos to see some more info, including sometimes an extended description.</b></p>
+                </div>
+                
+                <div class="entry-container photo-container">
+
+                </div>
+
+                <div class="image-popup" style="display:none;">
+                    <div class="popup-container">
+                        <div class="nav-controls">
+                            <p id="prev">Prev</p><p id="next">Next</p>
+                        </div>
+                        <main class="popup-content">
+                            <div class="left">
+                                <p class="load-indicator">Loading full resolution image...</p>
+                                <div class="img-contain"><img class="popup-img" src=""></div>
+                            </div>
+                            <div class="right">
+                                <p class="pheading"></p>
+                                <p class="psubheading"></p>
+                                <p class="pdesc">
+                                    Stop sending paradoxes to my house!
+                                </p>
+    
+                                <div class="metadata">
+                                    <div class="md-item"><a href="#" target="_blank" class="plink">link</a></div>
+                                    <div class="md-item">Uploaded <span class="date-value"></span></div>
+                                    <div class="md-item">Shot on <span class="camera-value"></span></div>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="things">
+            <title>carbonioid - things</title>
+            <div class="content">
+                <div class="heading">
+                    <h3>Things</h3>
+                    <div class="paragraph">Here are some things I've made and done.
+                    <ol>
+                        <li><a href="/things/webgames.html">Webgames</a> — a router of a bunch of fun online games; mostly geography trivia and word games. Make this a bookmark on your browser if you like!</li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </head>
+    <body>
+        <p class="dark-mode">
+            Switch to "dark mode"
+        </p>
+        <div class="banner-container">
+            <div class="move-buttons">
+                <span class="material-symbols-outlined left">arrow_left</span>
+                <span class="material-symbols-outlined right">arrow_right</span>
+            </div>
+            <div class="banner">
+                <img class="banner-img" width="100%">
+                <p class="title">carbonioid</p>
+    
+                <div class="link-image">
+                    <div class="white"></div>
+                    <img usemap="#map">
+                    <a class="github link" target="_black" href="https://www.github.com/carbonioid"></a>
+                    <a class="discord link"></a>
+                    <a class="email link"></a>
+                </div>
+            </div>
+            <div class="tooltip" style="display:none;">
+            </div>
+        </div>
+
+        <nav class="pages">
+            <div class="filler"></div>
+            <div class="links">
+                <a data-value="home">Home</a>
+                <a data-value="blog">Blog</a>
+                <a data-value="photo">Photography</a>
+                <a data-value="things">Things</a>
+            </div>
+        </nav>
+
+        <div class="main">
+            
+        </div>
+    </body>
+</html>
