@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>carbonioid - blog - in which i make a bad WFC implementation</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bytesized" rel="stylesheet">
+
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/blog.css">
+    </head>
+
+    <body class="blog-body">
+        <header class="blog-header">
+            <p class="backlink"><span class="material-symbols-outlined arrow-back">arrow_back</span> <span>Back to <a href="../?page=blog">blog</a></span></p>
+            <p class="metadata">Posted Jul 23rd 2026</p>
+        </header>
+        <main class="blog-content">
+            <p class="blog-title">
+                in which i make a bad WFC implementation
+            </p>
+            <p class="blog-paragraph">I'm doing a lot of research into procedural generation (terrain generation, cellular automata, all that) currently, so I thought I may as well some put something here for each algorithm I implement. Here's one for Wavefunction Collapse.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260723231731.png">
+                <p class="image-caption">some examples of a <a href="https://selfsame.itch.io/unitywfc">better implementation</a></p>
+            </div>
+            <p class="blog-subheading" style="--font-size-rem:2.0rem;">What is it?</p>
+            <p class="blog-paragraph">Wavefunction Collapse (also known as WFC or more generally Model Synthesis) is similar to a satisfiability/SAT solver: you give it a set of constraints (you could think of these as boolean variables) and it tries to generate a solution that satisfies them all. The special thing about WFC is that it can determine what those constraints are from an example input.</p>
+            <p class="blog-paragraph">Despite the fancy name, it's probably an algorithm that you've used at least once in your life. In <a href="https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/">Robert Heaton's article on WFC</a> (which I would recommend) they give the analogy of making a seating plan, which I think is quite helpful.</p>
+            <p class="blog-paragraph">To describe it informally, you start with all seats blank (in superposition) and then choose some seat and assign it a random value. Then look at your constraints and see what that means about the surrounding seats (maybe Bob won't sit next to Alice but Charlie has to.) Then choose the seat with the least remaining possibilities and choose a value for it. Repeat until you either have a full seating plan or a seat where no-one could possibly sit.</p>
+            <p class="blog-paragraph">I like how this reflects the way one would actually solve this problem: if you start at one seat you'll probably assign a seat near it next, not one 50 seats away; and that's the same with WFC because the seats with the least possibilities are the ones nearest to the seats with people already in them (as opposed to wavefunctions sitting all over the place.) It also makes me feel better about solving problems like this because now I have a fancy name to point to!</p>
+            <p class="blog-subheading" style="--font-size-rem:2.0rem;">What is it, actually?</p>
+            <p class="blog-paragraph">Informal definition aside, here's how you use it in 2D terrain generation: split your terrain into a tesselation of square tiles. Each one borders its four neighbours. Then we choose a couple tile types: maybe land, sea and coast.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260723231505.png">
+                <p class="image-caption">each square borders its neighbours like this, which you probably got already but I want to make images</p>
+            </div>
+            <p class="blog-subheading" style="--font-size-rem:1.6rem;">Rules</p>
+            <p class="blog-paragraph">So now we need to know how the squares can border each other. This is where our example input comes in. Basically, you analyse each square to see what it borders. Write down every possible combination (e.g. sea and border land to the north, coast can border sea to the east) and how often it occurs. Once you've done this you get a list of frequencies which you could think of as a matrix if you were so inclined.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260723232730.png">
+                <p class="image-caption">I am so inclined (it's really a 3-dimensional matrix with a 2D slice for each tile type, but i digress)</p>
+            </div>
+            <p class="blog-paragraph">In the cases where the frequency is 0.0, this interaction never happens and we should definitely not generate it when making our new image.</p>
+            <p class="blog-subheading" style="--font-size-rem:1.6rem;">Generating the Image</p>
+            <p class="blog-paragraph">In the same way as the seating plan, set the wavefunctions of all the tiles to every possible tile type. Then choose a tile (I use the top left corner) and set it to a random tile. Now, repeat these steps:</p>
+            <ul class="blog-list">
+                <li><b>Step 1:</b> look really hard at every tile on the board (you could be clever and flood fill out from the changed tile, but I don't.) If any of the surrounding tiles have a definite value, check what tiles can border that value in the relevant direction. If any of the tiles in the tile's wavefunction can't border the definite tile, remove them.</li>
+                <li><b>Step 2:</b> look even harder at every tile without a collapsed wavefunction and find the one with the lowest entropy. I've seen entropy calculated in a few of different ways (e.g. Shannon entropy), but I just take it as the number of possibilities (which is bad.) If you can't find any tiles without a collapsed waveform, you're finished and can stop.</li>
+                <li><b>Step 3:</b> collapse the wavefunction of this tile. For each possibility in its wavefunction (<i>and only these possibilities</i>), look up the weight of that tile type in that direction for each of its four neighbours. Add these up for each tile type and they become the weights you use to randomly choose the state of this tile. You just added one more definite tile to your grid!</li>
+            </ul>
+            <p class="blog-paragraph">This is a very unoptimized implementation of the function and I should probably be using shannon entropy, but it's still fun to play around with it. Here's an output on the left along with the input on the right.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260723233736.png">
+                <p class="image-caption"></p>
+            </div>
+            <p class="blog-paragraph">Because red never borders itself, the code has worked out that is forms dividing borders between grey and green! Admittedly, it's a shame that it still generates those random red dots everywhere. This simple implementation isn't an amazing algorithm but it does have a fun name and it's a pretty fun thing to code if you have an afternoon free.</p>
+            <p class="blog-subheading" style="--font-size-rem:1.6rem;">Further Reading</p>
+            <p class="blog-paragraph">As an aside, while reading around it turns out that you can think of WFC rulesets like Markov chains. An implementation where tiles can influence at most 1 tile away (which is what I made) is equivalent to an order-1 Markov chain. More generally, one where tiles can influence n tiles away is equivalent to an order-n Markov chain.</p>
+            <p class="blog-paragraph">Also, there exists an implementation by Shaad Alaka and Rafael Bidarra called 'Hierarchical Semantic wave function collapse' (that's the name of the relevant paper too) where tiles can take on multiple hierarchical states during generation: a tile might be a castle tile and on the next iteration either become a wall or courtyard tile. Check that out if you're interested.</p>
+        </main>
+    </body>
+</html>
