@@ -68,9 +68,10 @@ p.blog-title {
 /* Images */
 div.blog-image {
     width:100%;
-    display:grid;
-    grid-template-rows:auto 2rem;
-    place-items: center;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    place-items:center;
 }
 
 img.blog-image {
@@ -80,11 +81,17 @@ img.blog-image {
 p.image-caption {
     font-style:italic;
     font-weight:350;
+    width:65%;
+    text-align: center;
 }
 
 /* Paragraphs */
 p.blog-paragraph {
     position: relative;
+    font-size:var(--font-size-para);
+}
+
+.image-caption {
     font-size:var(--font-size-para);
 }
 
