@@ -5,6 +5,10 @@ body {
 
     --font-size-para:0.8rem;
     --accent-color:#86ACEF;
+
+    --code-bg: rgba(36, 41, 46, 1);
+    --code-text: #e8e8e8;
+
     position: relative;
 }
 
@@ -112,6 +116,7 @@ p.blog-subheading {
     display: flex;
     align-items: center;
 }
+
 /* 
 p.blog-subheading::before {
     content: "1.1";
@@ -133,4 +138,35 @@ ul.blog-list li {
 b {
     font-weight:950;
     color:var(--accent-color);
+}
+
+span.inline-codeblock {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    font-size: calc(var(--font-size-para)*0.9);
+    padding: 0.05rem 0.4rem;
+    border-radius: 0.35rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+p.blog-codeblock {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    /* font-family: "Courier New", Courier, monospace; */
+    font-size: var(--font-size-para);
+    line-height: 1.5;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+}
+
+/* Codeblocks reuse .blog-paragraph's line-number counter/position;
+   just nudge the number so it doesn't sit flush against the rounded box */
+p.blog-codeblock::before {
+    left: -2rem;
 }

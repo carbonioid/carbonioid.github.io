@@ -14,12 +14,13 @@
     <body class="blog-body">
         <header class="blog-header">
             <p class="backlink"><span class="material-symbols-outlined arrow-back">arrow_back</span> <span>Back to <a href="../?page=blog">blog</a></span></p>
-            <p class="metadata">Posted Jun 13th 2026</p>
+            <p class="metadata">Posted Jun 13th (Updated July 31st 2026)</p>
         </header>
         <main class="blog-content">
             <p class="blog-title">
                 notes on obsidian organisation
             </p>
+            <p class="blog-paragraph">> [!info] To improve > Explain <span class="inline-codeblock">_periodic</span> ></p>
             <div class="blog-image">
                 <img class="blog-image" src="../img/Pasted image 20260613133138.png">
                 <p class="image-caption">Some eye candy: my current obsidian graph. Nodes are notes, and edges are the links between them.</p>
@@ -53,34 +54,58 @@
             <p class="blog-paragraph">Okay, sorry for that complete text wall. The next sections should be shorter and easier to explain: type tags and content tags</p>
             <p class="blog-subheading" style="--font-size-rem:1.6rem;">Type tags</p>
             <p class="blog-paragraph">Type tags indicate the structure of a note. That is, types of notes with distinct structures all have a common type tag. Needing to set the type whenever I start a note helps me be a lot more thorough and structured in my note-taking. Type tags are also very useful when creating notes from templates: you can enter a type tag in the template, then be sure that all tags created with that template will have a common tag.</p>
-            <p class="blog-paragraph">To give some examples, I keep notes for media I'm reading/watching. All of these get the #meta/type/media-note tag, as the structure of the frontmatter is consistent between all media notes (although not necessarily the text of the note.) This could also go the other way - the frontmatter might vary, but the text's structure would be the same.</p>
+            <p class="blog-paragraph">To give some examples, I keep notes for media I'm reading/watching. All of these get the <span class="inline-codeblock">#meta/type/media-note</span> tag, as the structure of the frontmatter is consistent between all media notes (although not necessarily the text of the note.) This could also go the other way - the frontmatter might vary, but the text's structure would be the same.</p>
             <div class="blog-image">
-                <img class="blog-image" src="../img/Pasted image 20260613215018.png">
-                <p class="image-caption">An example of a media note, for the comic series <a href="https://jumalanpelko.thecomicseries.com/">Jumalanpelko</a> which I recently read (banner image created using the Pretty Properties plugin if anyone is interested)</p>
+                <img class="blog-image" src="../img/Pasted image 20260731143841.png">
+                <p class="image-caption">An example of a media note, for the comic series <a href="https://jumalanpelko.thecomicseries.com/">Jumalanpelko</a> which I recently read (cover image created using the Pretty Properties plugin if anyone is interested)</p>
             </div>
             <p class="blog-subheading" style="--font-size-rem:1.6rem;">Content tags</p>
             <p class="blog-paragraph">Content tags dictate, well, the content of a note. They are mostly used when I'm searching for notes, and take the place of what other people would probably use folders for: there is a maths content tag for all my mathematics-based notes, as well as an obsidian tag for all my notes talking about obsidian.</p>
             <p class="blog-subheading" style="--font-size-rem:2.0rem;">Links</p>
             <p class="blog-paragraph">Links aren't as important to me as they perhaps should be. In my daily notes, I make a lot of use of linking to notes for people and projects I'm working on (although I haven't found a useful way to use this data in queries yet.) I'm also making more of a start making mathematics theorems and proofs atomics so I can link between them. Overall, links more or less just function as links for me: they let me reference other pages.</p>
             <p class="blog-subheading" style="--font-size-rem:2.0rem;">Folders</p>
-            <p class="blog-paragraph">In terms of folders, when I started out with Obsidian I used many, many nested folders to organise all my notes. I've since moved away from this system (although I'm still partially migrated from it) mostly due to the fact that a note can only belong to one folder. There is some utility to folders as they provide a hierarchical structure which, crucially, I can view in Obsidian's file browser, but my current hope is to instead just use router pages (see below) and tags.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260731141157.png">
+                <p class="image-caption">An outline of my current folder system (meta-notes are what I discuss in <a href="https://carbonioid.github.io/blog/by-concept-organisation.html">this post</a>)</p>
+            </div>
+            <p class="blog-paragraph">Folders as a primary tool for organising notes is not a good paradigm, because a note can only belong to one folder at once. Sometimes it's okay (e.g. each project I'm doing generally has a folder) but tags are better.</p>
+            <p class="blog-paragraph">Reflecting this, folders have several functions for me so that a tag will very rarely need to span multiple folders:</p>
+            <ul class="blog-list">
+                <li>High-level folders for different use-cases</li>
+                <li>A <span class="inline-codeblock">meta/</span> folder for files I don't interact with regularly and a <span class="inline-codeblock">legacy/</span> folder for archival purposes</li>
+                <li>Low-level folders which enclose notes of a similar type (although this is always also done by tags)</li>
+            </ul>
+            <p class="blog-paragraph">The main function of folders, as I noted above, is use-cases. I want to be able to throw a note into a use-case folder and be sure I'll be able to find it later and it'll be in the correct context without much thought. For each specific thing I use my vault for, there's a separate folder under <span class="inline-codeblock">main/&lt;usecase&gt;</span>. In the screenshot above, <span class="inline-codeblock">_periodic</span> is just the use-case for my daily notes, but I've kept it separate from <span class="inline-codeblock">main/</span>.</p>
+            <p class="blog-paragraph"><span class="inline-codeblock">meta/</span> is for files I need to have but don't want to see. It has templates, my media folder (<span class="inline-codeblock">_files</span>), everything to do with <a href="https://tasknotes.dev/">TaskNotes</a> and everything else that is important but best kept out of view.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260731141715.png">
+                <p class="image-caption">The <span class="inline-codeblock">meta/</span> folder</p>
+            </div>
+            <p class="blog-paragraph"><span class="inline-codeblock">_legacy</span> is an archival system. Any note that no longer needs to be actively used or referenced (especially working notes whose project/task has finished) get put in here so that my main vault remains tidy.</p>
+            <p class="blog-paragraph">Occasionally, it is convenient to have a lower-level folder to keep some notes of the same type together. I try to also have a content or type tag to enforce this, but on a small scale it's OK to use whatever's most convenient.</p>
+            <p class="blog-paragraph">For example, I have a low-level folder for conlang-based projects & a higher-level one for all my projects, even projects are already identified by the <span class="inline-codeblock">#project</span> tag.</p>
+            <div class="blog-image">
+                <img class="blog-image" src="../img/Pasted image 20260731142338.png">
+                <p class="image-caption">Those folders I just mentioned</p>
+            </div>
             <p class="blog-subheading" style="--font-size-rem:1.6rem;">Router pages</p>
             <p class="blog-paragraph">The most useful pattern for Obsidian I'm using by far is <b>router pages</b>. A router page is an organisational page which only serves to list all the pages relating to that topic. The benefit of them is that they just make navigating your vault so much easier: if you don't know the precise name of a file but know the topic, you can just use the quick switcher to get to the router for that topic and quickly find the page.</p>
             <p class="blog-paragraph">This more or less allows collections of notes (through folders or tags) to interact <i>as notes</i> in your vault rather than being navigated through the file browser. Normally, I use a dataview query to list notes in a router. Obviously, you shouldn't make a router for topics that are too broad: in my experience, routers get cumbersome after you have more than 10 or 15 notes in them.</p>
-            <p class="blog-paragraph">The final benefit is that routers allow your notes to act like they're in folders without actually being in folders. As I'm switching over to tags, I don't have to change my navigation habits (in fact, routers actually become <i>more</i> flexible.) I only need to update my dataview queries to query by tag and not enclosing folder.</p>
+            <p class="blog-paragraph">The final benefit is that routers allow your notes to act like they're in folders without actually being in folders. As I've switched over to tags from folders, I don't have to change my navigation habits (in fact, routers actually become <i>more</i> flexible.) I only need to update my dataview queries to query by tag and not enclosing folder.</p>
             <div class="blog-image">
-                <img class="blog-image" src="../img/Pasted image 20260613215914.png">
-                    <p class="image-caption">My router page for Obsidian</p>
+                <img class="blog-image" src="../img/Pasted image 20260731143948.png">
+                <p class="image-caption">My router page for Obsidian</p>
             </div>
             <p class="blog-subheading" style="--font-size-rem:2.0rem;">Frontmatter</p>
             <p class="blog-paragraph">Frontmatter is a set of machine- and human-readable key-value pairs at the start of an Obsidian note. Its purpose is to store small, structured pieces of information about the current note. I use frontmatter for three pretty typical uses cases:</p>
             <p class="blog-paragraph"><b>Note type-specific properties:</b> Some note types (from the "Type tags" section) will have a set of frontmatter properties that are unique to them: for example, all media notes in my vault have an "author" frontmatter property.</p>
             <p class="blog-paragraph"><b>General properties:</b> I use some general properties which all notes can have: namely a custom "related" property which I use to denote related notes, although this differs slightly depending on the context. For example, in notes for math theorems, related notes are often theorems needed as prerequisites.</p>
-            <p class="blog-paragraph">I also have a "progress" tag which is used over multiple note types (mostly relating to ongoing projects). This is very useful for organising notes in dataview queries.</p>
+            <p class="blog-paragraph">I also have a "progress" tag which is used over multiple note types (e.g. ongoing projects and books I'm reading). This is very useful for organising notes in dataview queries.</p>
             <p class="blog-paragraph">As a quick addendum, I would recommend anyone who uses a lot of frontmatter tags and has an interest in making their vault pretty to install <a href="https://community.obsidian.md/plugins/typify">Typify</a> to make them look nice.</p>
             <p class="blog-subheading" style="--font-size-rem:2.0rem;">Fin.</p>
             <p class="blog-paragraph">Well, that's pretty much everything. When I started writing this post, I had the word "brief" in the description but I... don't think that really applies anymore. If anyone of this gives you ideas for your own vault (or inspires you to download Obsidian — definitely do!) then I'd be honoured :)</p>
             <p class="blog-paragraph">There is some other Obsidian stuff I'd like to go into - conversion to/from other programs and styling - so I might make a few more in this vein at some point. Watch this space. Anyway, thanks for reading.</p>
+            <p class="blog-paragraph">(Future me here — I've written another post, about <a href="https://carbonioid.github.io/blog/by-concept-organisation.html">By-concept organisation</a> in Obsidian; it's a bit more abstract but might be worth a read)</p>
         </main>
     </body>
 </html>
