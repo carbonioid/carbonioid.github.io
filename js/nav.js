@@ -14,6 +14,9 @@ const config = {
     },
     'home': {
         'stylesheet': 'css/home.css'
+    },
+    'blog': {
+        'stylesheet': 'css/blog-router.css'
     }
 }
 
