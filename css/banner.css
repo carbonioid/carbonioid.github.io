@@ -102,6 +102,10 @@ Hover animations
 
 /*
 Links
+
+ADDING NEW LINKS:
+add the new src in mask-image: url()...
+update the x positions in both mask-position: and for each .github, .discord etc to position the actual links
 */  
 .link-image {
     position:absolute;
@@ -111,13 +115,15 @@ Links
 
     --top-padding:4vw;
     --between:10vw;
-    mask-image:url(https://raw.githubusercontent.com/primer/octicons/refs/heads/main/icons/mark-github-24.svg), 
-    url(https://raw.githubusercontent.com/simple-icons/simple-icons/refs/heads/develop/icons/discord.svg),
-    url(https://raw.githubusercontent.com/google/material-design-icons/refs/heads/master/src/communication/alternate_email/materialiconsround/24px.svg);
+    mask-image:url(../icons/github.svg), 
+    url(../icons/discord.svg),
+    url(../icons/email.svg),
+    url(../icons/youtube.svg);
     mask-position:
-        calc(50% - (var(--between) / 2)) calc(50% + var(--top-padding)), 
-        50% calc(50% + var(--top-padding)),
-        calc(50% + (var(--between) / 2)) calc(50% + var(--top-padding));
+        calc(50% - (var(--between) / 2) - var(--between) / 4) calc(50% + var(--top-padding)), 
+        calc(50% - (var(--between) / 4)) calc(50% + var(--top-padding)),
+        calc(50% + (var(--between) / 4)) calc(50% + var(--top-padding)),
+        calc(50% + (var(--between) / 2) + var(--between) / 4) calc(50% + var(--top-padding));
 
     mask-repeat:no-repeat;
     mask-size:2vw;
@@ -143,15 +149,19 @@ Links
 }
 
 .github {
-    left:calc(50% - (var(--between) / 2) - 1vw);
+    left:calc(50% - var(--between) / 4 - (var(--between) / 2) - 1vw);
 }
 
 .discord {
-    left:calc(50% - 1vw);
+    left:calc(50% - 1vw - var(--between) / 4);
 }
 
 .email {
-    left:calc(50% + (var(--between) / 2) - 1vw);
+    left:calc(50% + (var(--between) / 4) - 1vw);
+}
+
+.youtube {
+    left:calc(50% + var(--between) / 4 + (var(--between) / 2) - 1vw);
 }
 
 /*
