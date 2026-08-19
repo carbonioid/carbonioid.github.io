@@ -1,27 +1,10 @@
 h3.blog-separator {
-    text-transform: capitalize;
-    text-decoration: underline;
-    text-decoration-thickness: 0.15rem;
-
-    font-size: 1rem;
-
     padding-top:1rem;
     padding-bottom:1rem;
-    width:100%;
-    text-align: center;
-    font-weight:950;
+
+    padding-left:0.5rem;
 }
 
 .entry-container {
     padding-bottom: 0rem !important;
 }
-
-/* h3.blog-separator::before {
-    counter-increment: paragraphs;
-    content: counter(paragraphs, decimal-leading-zero);
-    position: absolute;
-    left:-2rem;
-    color:black;
-    position:relative;
-    font-size:var(--font-size-para);
-} */

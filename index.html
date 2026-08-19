@@ -16,33 +16,45 @@
 
         <template id="home">
             <title>carbonioid</title>
-            <div class="content">
-                <div class="heading">
-                    <h3>Hi! I go by carbonioid.</h3>
-                    <div class="paragraph">This is my cool-looking, horribly maintainable site (css masking just isn't really there yet...)  
-                    <br> <br>
-                    I made the photos in the banner with my <a target="_blank" href="https://github.com/carbonioid/mandelbrot">Mandelbrot explorer</a> and using my amateurish <a href="/?page=photo">photography</a> skills.
-                    As as well as programming and photography, I'm also interested in maths, physics, chemistry, linguistics and fractals 
-                    (hence the <a target="_blank" href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot</a> images.) Also, I listen to a lot of music and play games occasionally.
-                    <br> <br>
-                    I'm currently studying Mathematics, Computer Science and Physics and doing a lot of programming and maths recreationally as well.
-                    <ol>
-                        <li>I like linear algebra and graph theory</li>
-                        <li>I've written some <a href="./files/special_relativity.pdf">research papers</a> and made some <a target="_blank" href="https://www.desmos.com/calculator/3zrkas2upm">pretty graphs</a></li>
-                        <li>I also enjoy proramming discord bots, esoteric code, fractal simulations and CLI tools</li>
-                    </ol> 
-                    While you're here,
-                    <ol>
-                        <li>Check out the <a href="./?page=photo">photos I've taken</a></li>
-                        <li>Read my <a href="/blog/obsidian-organisation.html">post about Obsidian</a> or <a href="/?page=blog">check out my blog more generally</a></li>
-                        <li>Have a look at my various <a href="/?page=things">Things™</a></li>
-                        <li>Go play some <a href="/things/webgames.html">webgames</a></li>
-                    </ol>
-                    If you'd like to get in touch, I'm best reached via Discord if you know me <i>in the real life</i>, or email if you don't.
+            <div class="sitemap">
+                <div class="sitemap-item">
+                    <p class="sitemap-heading">Sitemap</p>
+                    <a class="activity-heading sitemap-subheading">Newest</p>
+                    <a href="https://carbonioid.github.io/blog/coastline-agents.html" class="sitemap-text">blog - coastline generation</a>
                     
-                    <br> <br>
-                    </div>      
+                    <a href="https://carbonioid.github.io/?page=blog" class="activity-heading sitemap-subheading">Blog</a>
+                    <a href="https://carbonioid.github.io/blog/obsidian-organisation.html" class="sitemap-text">blog - obsidian organisation</a>
+                    <a href="https://carbonioid.github.io/blog/coastline-agents.html" class="sitemap-text">blog - coastline generation</a>
+                    <a href="https://carbonioid.github.io/blog/obsidian-organisation.html" class="sitemap-text">blog - wavefunction collapse</a>
+                    <a href="https://carbonioid.github.io/blog/obsidian-organisation.html" class="sitemap-text">blog - by-concept organisation</a>
+
+                    <a href="https://carbonioid.github.io/?page=things" class="activity-heading sitemap-subheading">Things</a>
+                    <a href="https://carbonioid.github.io/things/webgames.html" class="sitemap-text">webgames</a>
                 </div>
+            </div>
+            <div class="content">
+                <h3>Hi! I go by carbonioid.</h3>
+                <div class="paragraph">This is my cool-looking, horribly maintainable site (css masking just isn't really there yet...)  
+                <br> <br>
+                I made the photos in the banner with my <a target="_blank" href="https://github.com/carbonioid/mandelbrot">Mandelbrot explorer</a> and using my amateurish <a href="/?page=photo">photography</a> skills.
+                As as well as programming and photography, I'm also interested in maths, physics, chemistry, linguistics and fractals 
+                (hence the <a target="_blank" href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot</a> images.) Also, I listen to a lot of music and play games occasionally.
+                <br> <br>
+                I'm currently studying Mathematics, Computer Science and Physics and doing a lot of programming and maths recreationally as well.
+                <ol>
+                    <li>I like linear algebra and graph theory</li>
+                    <li>I've written some <a href="./files/special_relativity.pdf">research papers</a> and made some <a target="_blank" href="https://www.desmos.com/calculator/3zrkas2upm">pretty graphs</a></li>
+                    <li>I also enjoy proramming discord bots, esoteric code, fractal simulations and CLI tools</li>
+                </ol> 
+                While you're here,
+                <ol>
+                    <li>Check out the <a href="./?page=photo">photos I've taken</a></li>
+                    <li>Read my <a href="/blog/obsidian-organisation.html">post about Obsidian</a> or <a href="/?page=blog">check out my blog more generally</a></li>
+                    <li>Have a look at my various <a href="/?page=things">Things™</a></li>
+                    <li>Go play some <a href="/things/webgames.html">webgames</a></li>
+                </ol>
+                If you'd like to get in touch, I'm best reached via Discord if you know me <i>in the real life</i>, or email if you don't.
+                </div>      
             </div>
         </template>
 
@@ -54,7 +66,7 @@
                     <div class="heading">
                         <p>I post things here sometimes. No particular topics, but frequently <a href="https://obsidian.md/">Obsidian</a>, compsci and math prjoects, and random thoughts about media.</p>
                     </div>
-                    <h3 class="blog-separator">Obsidian</h3>
+                    <h3 class="blog-separator activity-heading">Obsidian</h3>
                     <div class="entry-container">
                         <a class="entry"  href="./blog/obsidian-organisation.html">
                             <div class="text">
@@ -71,7 +83,7 @@
                         </a>
                     </div>
 
-                    <h3 class="blog-separator">Terrain generation</h3>
+                    <h3 class="blog-separator activity-heading">Terrain generation</h3>
                     <div class="entry-container"> 
                         <a class="entry"  href="./blog/wfc.html">
                             <div class="text">

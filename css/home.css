@@ -2,3 +2,32 @@
     padding:.5rem 0;
     font-weight:950;
 }
+
+.sitemap {
+    float:right;
+    margin-bottom:5rem;
+    margin-left:1rem;
+    padding:.5rem;
+    width:35%;
+
+    border:1px solid black;
+}
+
+.sitemap-heading {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    font-size:1rem;
+    text-decoration: underline;
+}
+
+.sitemap-text {
+    color:black; /* avoid link formatting */
+}
+
+.sitemap-subheading {
+    /* Some may be links */
+    text-decoration: none;
+    color:black;
+    padding-top:.25rem;
+}

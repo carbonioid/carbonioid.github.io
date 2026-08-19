@@ -21,7 +21,7 @@ body {
     padding:3rem 0;
 }
 
-p, .paragraph {
+p, .paragraph, a {
     margin:0;
     padding:0;
     font-size:0.85rem;
@@ -153,6 +153,29 @@ Pages nav
 
 .content .heading h1, .content .heading h2, .content .heading h3, .content .heading h4, .content .heading h5, .content .heading h6 {
     margin:.2rem 0;
+}
+
+/*
+Interesting heading style
+*/
+
+.activity-heading {
+    font-size:1rem;
+    font-weight:1000;
+    display:flex;
+    align-items: center;
+}
+
+.activity-heading::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ff00;
+    border:1px solid black;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 /*
